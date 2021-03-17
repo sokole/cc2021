@@ -11,5 +11,10 @@ FROM cyversevice/rstudio-verse:latest
 # switch back to rstudio user
 # USER rstudio
 
-# install some R packages
-RUN R -e "install.packages('neonUtilities', dependencies=TRUE)"
+# install neonUtilities R package
+RUN R -e "devtools::install_version(
+  package = 'neonUtilities', 
+  version = '2.0.1', 
+  repos = 'http://cran.rstudio.com', 
+  dependencies = TRUE,
+  upgrade = 'always')"
