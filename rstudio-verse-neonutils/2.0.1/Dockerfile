@@ -12,9 +12,4 @@ FROM cyversevice/rstudio-verse:4.0.0-ubuntu18.04
 # USER rstudio
 
 # install neonUtilities R package
-RUN R -e "devtools::install_version(
-  package = 'neonUtilities', 
-  version = '2.0.1', 
-  repos = 'http://cran.rstudio.com', 
-  dependencies = TRUE,
-  upgrade = 'always')"
+RUN R -e "devtools::install_version(package = 'neonUtilities',version = '2.0.1',repos = 'http://cran.rstudio.com',dependencies = TRUE,upgrade = 'always')"
