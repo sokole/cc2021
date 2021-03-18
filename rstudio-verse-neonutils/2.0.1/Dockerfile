@@ -1,6 +1,6 @@
 # this is just a demo
 # get container from cyverse
-FROM cyversevice/rstudio-verse:latest
+FROM cyversevice/rstudio-verse:4.0.0-ubuntu18.04
 
 # change to root user to install packages
 # USER root
